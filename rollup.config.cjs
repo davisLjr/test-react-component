@@ -29,7 +29,7 @@ module.exports = [
       typescript({tsconfig: "./tsconfig.json"}),
       postcss(),
       globImport({
-        exclude: "**/front/**/*.ts",
+        exclude: ["**/app/**/*"],
       }),
     ],
   },

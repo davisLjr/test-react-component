@@ -1,5 +1,5 @@
 {
-  "ignorePatterns": ["node_modules/", "build/", "dist/", "front/"],
+  "ignorePatterns": ["node_modules/", "build/", "dist/", "app/"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
