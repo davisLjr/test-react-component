@@ -1,0 +1,73 @@
+{
+  "ignorePatterns": ["node_modules/", "build/", "dist/", "front/"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-prettier",
+    "prettier"
+  ],
+  "plugins": ["react", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "tsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    // Reglas generales
+    "no-console": ["error", {"allow": ["warn", "error"]}], // Evitar console.log en producción
+    "no-unused-vars": "error", // Detectar variables no utilizadas
+    "react/jsx-uses-react": "error", // Asegurar que React esté en el ámbito del alcance
+    "react/jsx-uses-vars": "error", // Detectar variables no utilizadas en JSX
+    "react/react-in-jsx-scope": "error", // Asegurar que React esté disponible al utilizar JSX
+
+    // Reglas de formato y estilo
+    "indent": ["error", 2], // Indentación de 2 espacios
+    "quotes": ["error", "double"], // Uso de comillas dobles
+    "semi": ["error", "always"], // Punto y coma al final de las declaraciones
+    "comma-dangle": ["error", "always-multiline"], // Coma al final en objetos y arreglos multilínea
+
+    // Reglas específicas de TypeScript
+    "@typescript-eslint/no-unused-vars": "error", // Detectar variables TypeScript no utilizadas
+
+    // Reglas específicas de React
+    "react/prop-types": "off", // Desactivar propTypes al utilizar TypeScript
+
+    // Reglas específicas de JSX y TSX
+    "react/jsx-indent": ["error", 2], // Indentación de 2 espacios en JSX
+    "react/jsx-filename-extension": ["error", {"extensions": [".tsx", ".ts"]}], // Asegurar que los archivos JSX tengan extensión .tsx
+    "react/jsx-curly-spacing": [
+      "error",
+      {
+        "when": "never",
+        "children": true,
+        "spacing": {"objectLiterals": "never"}
+      }
+    ] // Espaciado consistente en las llaves de JSX
+  },
+  "overrides": [
+    {
+      // Aplicar reglas específicas de TypeScript a archivos .ts y .tsx
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off" // Desactivar para funciones de React en archivos TypeScript
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
