@@ -44,17 +44,17 @@ const weightFunction = (weight: string) => {
   let titleWeightClass = "font-weight-";
 
   switch (weight) {
-    case "bold":
-      titleWeightClass += "bold";
-      break;
-    case "semibold":
-      titleWeightClass += "semibold";
-      break;
-    case "normal":
-      titleWeightClass += "normal";
-      break;
-    default:
-      titleWeightClass += "normal";
+  case "bold":
+    titleWeightClass += "bold";
+    break;
+  case "semibold":
+    titleWeightClass += "semibold";
+    break;
+  case "normal":
+    titleWeightClass += "normal";
+    break;
+  default:
+    titleWeightClass += "normal";
   }
   return titleWeightClass;
 };
@@ -63,23 +63,23 @@ const sizeFunction = (size: "xs" | "sm" | "md" | "lg" | "xl") => {
   let sizeClass = "font-weight-";
 
   switch (size) {
-    case "xs":
-      sizeClass += "xs";
-      break;
-    case "sm":
-      sizeClass += "sm";
-      break;
-    case "md":
-      sizeClass += "md";
-      break;
-    case "lg":
-      sizeClass += "lg";
-      break;
-    case "xl":
-      sizeClass += "xl";
-      break;
-    default:
-      sizeClass += "md";
+  case "xs":
+    sizeClass += "xs";
+    break;
+  case "sm":
+    sizeClass += "sm";
+    break;
+  case "md":
+    sizeClass += "md";
+    break;
+  case "lg":
+    sizeClass += "lg";
+    break;
+  case "xl":
+    sizeClass += "xl";
+    break;
+  default:
+    sizeClass += "md";
   }
   return sizeClass;
 };

@@ -265,8 +265,8 @@ export default function Calendar({
                                   : Array.isArray(activeDay.day) &&
                                       activeDay.day.length > 2
                                     ? `${activeDay.day[0]} al ${
-                                        activeDay.day[activeDay.day.length - 1]
-                                      }.`
+                                      activeDay.day[activeDay.day.length - 1]
+                                    }.`
                                     : `${activeDay.day}.`}
                               </strong>{" "}
                               {activeDay.title}
@@ -291,8 +291,8 @@ export default function Calendar({
                           : Array.isArray(activeDay.day) &&
                               activeDay.day.length > 2
                             ? `${activeDay.day[0]} al ${
-                                activeDay.day[activeDay.day.length - 1]
-                              }.`
+                              activeDay.day[activeDay.day.length - 1]
+                            }.`
                             : `${activeDay.day}.`}
                       </strong>{" "}
                       {activeDay.title}
