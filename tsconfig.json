@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",           // Carpeta de salida
-    "module": "ESNext",           // Usar módulos de ECMAScript
-    "target": "ES6",              // Compatibilidad con ES6+
-    "declaration": true,          // Genera archivos de declaración de tipos (.d.ts)
-    "declarationDir": "./dist",   // Ubicación para archivos de declaración
-    "jsx": "react-jsx",           // Usar JSX con React 17+ (recomendado si usas versiones recientes de React)
-    "moduleResolution": "node",   // Resolución de módulos para node
-    "esModuleInterop": true,      // Interoperabilidad con módulos CommonJS/ESM
+    "outDir": "./dist", // Carpeta de salida
+    "module": "ESNext", // Usar módulos de ECMAScript
+    "target": "ES6", // Compatibilidad con ES6+
+    "declaration": true, // Genera archivos de declaración de tipos (.d.ts)
+    "declarationDir": "./dist", // Ubicación para archivos de declaración
+    "jsx": "react-jsx", // Usar JSX con React 17+ (recomendado si usas versiones recientes de React)
+    "moduleResolution": "node", // Resolución de módulos para node
+    "esModuleInterop": true, // Interoperabilidad con módulos CommonJS/ESM
     "allowSyntheticDefaultImports": true, // Permitir importaciones predeterminadas en ESM y CJS
-    "skipLibCheck": true,         // Omite la comprobación de tipos de dependencias
-    "strict": true,               // Activa todas las verificaciones estrictas
-    "removeComments": true,       // Elimina los comentarios del código compilado
-    "sourceMap": true,            // Genera mapas de código fuente
-    "isolatedModules": true       // Verificación estricta de módulos por archivo (recomendado si usas compiladores como Babel después)
+    "skipLibCheck": true, // Omite la comprobación de tipos de dependencias
+    "strict": true, // Activa todas las verificaciones estrictas
+    "removeComments": true, // Elimina los comentarios del código compilado
+    "sourceMap": true, // Genera mapas de código fuente
+    "isolatedModules": true // Verificación estricta de módulos por archivo (recomendado si usas compiladores como Babel después)
   },
-  "include": ["src/**/*"],        // Incluir todo lo que esté en la carpeta src
-  "exclude": ["node_modules", "dist", "app"]  // Excluir node_modules y la carpeta de salida
+  "include": ["src/**/*"], // Incluir todo lo que esté en la carpeta src
+  "exclude": ["node_modules", "dist", "app"] // Excluir node_modules y la carpeta de salida
 }
