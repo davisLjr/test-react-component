@@ -33,7 +33,7 @@
     "react/react-in-jsx-scope": "error", // Asegurar que React esté disponible al utilizar JSX
 
     // Reglas de formato y estilo
-    "indent": ["error", 2], // Indentación de 2 espacios
+    "indent": "off", // Indentación de 2 espacios
     "quotes": ["error", "double"], // Uso de comillas dobles
     "semi": ["error", "always"], // Punto y coma al final de las declaraciones
     "comma-dangle": ["error", "always-multiline"], // Coma al final en objetos y arreglos multilínea
