@@ -1,5 +1,4 @@
 import React from "react";
-import "./ListLink.scss";
 
 interface List {
   items: string[];

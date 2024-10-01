@@ -1,6 +1,5 @@
 import React, {ReactNode} from "react";
 import {Sizes} from "../../utils/utils.js";
-import "./Access.scss";
 import AccessLink from "./AccessLink/AccessLink";
 import AccessContent from "./AccessContent/AccessContent";
 import AccessTitle from "./AccessTitle/AccessTitle";
