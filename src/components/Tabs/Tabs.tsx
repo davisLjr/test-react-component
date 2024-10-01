@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, {useState, useRef, useEffect} from "react";
 import Tab from "./Tab";
 import TabPanel from "./TabPanel";
 
@@ -22,7 +22,7 @@ export type TabsProps = {
   scrollAmount?: number;
 };
 
-export default function Tabs ({
+export default function Tabs({
   tabs,
   fixedWidth,
   tabsSecondary,
@@ -48,7 +48,7 @@ export default function Tabs ({
 
   const handleScroll = (direction: "left" | "right") => {
     if (tabListRef.current) {
-      const { scrollLeft, clientWidth, scrollWidth } = tabListRef.current;
+      const {scrollLeft, clientWidth, scrollWidth} = tabListRef.current;
       const maxScrollLeft = scrollWidth - clientWidth;
       let newScrollLeft = scrollLeft;
 
@@ -67,7 +67,7 @@ export default function Tabs ({
 
   const updateScrollButtons = () => {
     if (tabListRef.current) {
-      const { scrollLeft, clientWidth, scrollWidth } = tabListRef.current;
+      const {scrollLeft, clientWidth, scrollWidth} = tabListRef.current;
       const maxScrollLeft = scrollWidth - clientWidth;
 
       setCanScrollLeft(scrollLeft > 0);

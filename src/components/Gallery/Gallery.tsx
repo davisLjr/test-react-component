@@ -15,7 +15,10 @@ export type GalleryProps = {
   images?: GalleryImages[];
 };
 
-export default function Gallery ({ interactive = true, images = [] }: GalleryProps) {
+export default function Gallery({
+  interactive = true,
+  images = [],
+}: GalleryProps) {
   const modalClass = classNames("modal", "modal-carousel");
 
   const totalImages = images.length;
@@ -25,7 +28,7 @@ export default function Gallery ({ interactive = true, images = [] }: GalleryPro
       <div
         className={`gallery-grid gallery-max-${totalImages && totalImages <= 7 ? totalImages : 7}`}
       >
-        {images.slice(0, 7).map(({ url, alt }, index) =>
+        {images.slice(0, 7).map(({url, alt}, index) =>
           interactive ? (
             <a
               key={index}
@@ -63,37 +66,40 @@ export default function Gallery ({ interactive = true, images = [] }: GalleryPro
                 data-interval="false"
               >
                 <div className="carousel-inner">
-                  {images.slice(0, 7).map(({ url, alt, author, title, description }, index) => (
-                    <div
-                      key={index}
-                      className={`carousel-item ${index === 0 ? "active" : ""}`}
-                    >
-                      <img src={url} className="d-block w-100" alt={alt} />
-                      <div className="carousel-caption">
-                        <div className="row mb-4">
-                          <div className="col">
-                            <span className="text-xs">{author}</span>
+                  {images
+                    .slice(0, 7)
+                    .map(({url, alt, author, title, description}, index) => (
+                      <div
+                        key={index}
+                        className={`carousel-item ${index === 0 ? "active" : ""}`}
+                      >
+                        <img src={url} className="d-block w-100" alt={alt} />
+                        <div className="carousel-caption">
+                          <div className="row mb-4">
+                            <div className="col">
+                              <span className="text-xs">{author}</span>
+                            </div>
+                            <div className="col text-right">
+                              <span className="text-xs">
+                                Imagen {index + 1}/
+                                {totalImages <= 7 ? totalImages : 7}
+                              </span>
+                            </div>
                           </div>
-                          <div className="col text-right">
-                            <span className="text-xs">
-                              Imagen {index + 1}/{totalImages <= 7 ? totalImages : 7}
-                            </span>
-                          </div>
+                          <h5 className="h2">{title}</h5>
+                          {description && (
+                            <p>
+                              {description.split("\n").map((line, index) => (
+                                <React.Fragment key={index}>
+                                  {index === 0 ? `${line} ` : line}
+                                  {index === 0 && <br />}
+                                </React.Fragment>
+                              ))}
+                            </p>
+                          )}
                         </div>
-                        <h5 className="h2">{title}</h5>
-                        {description && (
-                          <p>
-                            {description.split("\n").map((line, index) => (
-                              <React.Fragment key={index}>
-                                {index === 0 ? `${line} ` : line}
-                                {index === 0 && <br />}
-                              </React.Fragment>
-                            ))}
-                          </p>
-                        )}
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
                 <button
                   className="carousel-control-prev"

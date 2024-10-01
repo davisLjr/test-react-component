@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 
 export type HighlightedHorizontalBoxProps = {
   className?: string;
@@ -6,13 +6,15 @@ export type HighlightedHorizontalBoxProps = {
   isBgLight?: boolean;
 };
 
-export default function HighlightedHorizontalBox ({
+export default function HighlightedHorizontalBox({
   className,
   children,
   isBgLight,
 }: HighlightedHorizontalBoxProps) {
   return (
-    <div className={`panel-horizontal-content${isBgLight ? " bg-light" : ""}${className ? ` ${className}` : ""}`}>
+    <div
+      className={`panel-horizontal-content${isBgLight ? " bg-light" : ""}${className ? ` ${className}` : ""}`}
+    >
       {children}
     </div>
   );

@@ -1,18 +1,27 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 
-export interface CardLinkData extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface CardLinkData
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children?: ReactNode | ReactNode[];
   className?: string;
   path?: string;
-  allClickable?: boolean
+  allClickable?: boolean;
 }
 
-export default function CardLink ({ className, children, allClickable = false, path = "#", ...props }: CardLinkData) {
-
+export default function CardLink({
+  className,
+  children,
+  allClickable = false,
+  path = "#",
+  ...props
+}: CardLinkData) {
   return (
-    <a href={path} className={`${allClickable ? "card-title-link" : ""}${className ? ` ${className}` : ""}`} {...props}>
+    <a
+      href={path}
+      className={`${allClickable ? "card-title-link" : ""}${className ? ` ${className}` : ""}`}
+      {...props}
+    >
       {children}
     </a>
   );
 }
-

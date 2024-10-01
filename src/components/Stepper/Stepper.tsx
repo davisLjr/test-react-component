@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 
 export type StepperProps = {
   title?: string;
@@ -6,16 +6,15 @@ export type StepperProps = {
   steps?: number;
   activeStep?: number;
   children?: ReactNode | ReactNode[];
-}
+};
 
-export default function Stepper ({
+export default function Stepper({
   title = "Nombre del paso",
   nextStepTitle = "Nombre del paso 3",
   steps = 5,
   activeStep = 2,
   children,
 }: StepperProps) {
-
   return (
     <>
       <div className="stepper">
@@ -23,7 +22,7 @@ export default function Stepper ({
         <p className="step-next">Paso siguiente: {nextStepTitle}</p>
         {children}
         <div className="steps">
-          {Array.from({ length: steps }, (_, index) => (
+          {Array.from({length: steps}, (_, index) => (
             <div
               key={index}
               className={`step ${index <= activeStep - 1 ? "active" : ""}`}

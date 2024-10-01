@@ -8,7 +8,7 @@ interface BannerData {
   isDark?: boolean;
 }
 
-export default function Banner ({
+export default function Banner({
   buttons,
   children,
   iconBanner,
@@ -29,7 +29,6 @@ export default function Banner ({
         {children}
         <p className="banner-text">{description}</p>
         {buttons && <div className="banner-actions">{buttons}</div>}
-
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ export interface AlertData {
   className?: string;
 }
 
-export default function Alert ({
+export default function Alert({
   children,
   isDimissible,
   alertInfo,

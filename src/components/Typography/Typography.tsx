@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 
 interface BasicTypography {
   content: string;
@@ -7,8 +7,8 @@ interface BasicTypography {
 
 interface BodyAndTagProps extends BasicTypography {
   size: "xs" | "sm" | "md" | "lg" | "xl";
-  italic?: "italic" ;
-  underline?: "underline" ;
+  italic?: "italic";
+  underline?: "underline";
   weight: "bold" | "semibold" | "normal";
 }
 
@@ -29,24 +29,32 @@ interface ListProps {
 }
 
 interface TransfomationsProps extends BasicTypography {
-  transform: "strong" | "em" | "small" | "small" | "mark" | "sup" | "sub" | "kbd"
+  transform:
+    | "strong"
+    | "em"
+    | "small"
+    | "small"
+    | "mark"
+    | "sup"
+    | "sub"
+    | "kbd";
 }
 
 const weightFunction = (weight: string) => {
   let titleWeightClass = "font-weight-";
 
   switch (weight) {
-  case "bold":
-    titleWeightClass += "bold";
-    break;
-  case "semibold":
-    titleWeightClass += "semibold";
-    break;
-  case "normal":
-    titleWeightClass += "normal";
-    break;
-  default:
-    titleWeightClass += "normal";
+    case "bold":
+      titleWeightClass += "bold";
+      break;
+    case "semibold":
+      titleWeightClass += "semibold";
+      break;
+    case "normal":
+      titleWeightClass += "normal";
+      break;
+    default:
+      titleWeightClass += "normal";
   }
   return titleWeightClass;
 };
@@ -55,23 +63,23 @@ const sizeFunction = (size: "xs" | "sm" | "md" | "lg" | "xl") => {
   let sizeClass = "font-weight-";
 
   switch (size) {
-  case "xs":
-    sizeClass += "xs";
-    break;
-  case "sm":
-    sizeClass += "sm";
-    break;
-  case "md":
-    sizeClass += "md";
-    break;
-  case "lg":
-    sizeClass += "lg";
-    break;
-  case "xl":
-    sizeClass += "xl";
-    break;
-  default:
-    sizeClass += "md";
+    case "xs":
+      sizeClass += "xs";
+      break;
+    case "sm":
+      sizeClass += "sm";
+      break;
+    case "md":
+      sizeClass += "md";
+      break;
+    case "lg":
+      sizeClass += "lg";
+      break;
+    case "xl":
+      sizeClass += "xl";
+      break;
+    default:
+      sizeClass += "md";
   }
   return sizeClass;
 };
@@ -82,7 +90,7 @@ const italicUnderline = (style?: "italic" | "underline") => {
   } else if (style === "underline") {
     return "underline-1";
   } else {
-    return ""; 
+    return "";
   }
 };
 
@@ -161,27 +169,27 @@ export const Body: React.FC<BodyAndTagProps> = ({
 // Cuerpo - Fin
 
 // Citas - Inicio
-export const Quote: React.FC<QuoteProps> = ({ content, className, author }) => {
+export const Quote: React.FC<QuoteProps> = ({content, className, author}) => {
   return (
     <>
       <blockquote className={className ? `${className} ` : ""}>
         <p> {content} </p>
         {author ? <small>{author}</small> : ""}
-      </blockquote >
+      </blockquote>
     </>
   );
 };
 // Citas - Fin
 
 // Listas - Inicio
-export const List: React.FC<ListProps> = ({ content, className, list }) => {
+export const List: React.FC<ListProps> = ({content, className, list}) => {
   const TagList = list;
 
   return (
     <>
-      <TagList className={className ? `${className} ` : ""} >
+      <TagList className={className ? `${className} ` : ""}>
         {content.map((e, i) => {
-          return (<li key={i}>{e}</li>);
+          return <li key={i}>{e}</li>;
         })}
       </TagList>
     </>
@@ -189,14 +197,15 @@ export const List: React.FC<ListProps> = ({ content, className, list }) => {
 };
 // Listas - Fin
 
-// Transformaciones - Inicio 
-export const Transformation: React.FC<TransfomationsProps> = ({ content, transform }) => {
+// Transformaciones - Inicio
+export const Transformation: React.FC<TransfomationsProps> = ({
+  content,
+  transform,
+}) => {
   const Tag = transform;
 
-  return (
-    <Tag>{content}</Tag>
-  );
+  return <Tag>{content}</Tag>;
 };
 // Transformaciones - Fin
 
-export default { Body, Tag, Title, Quote, List, Transformation };
+export default {Body, Tag, Title, Quote, List, Transformation};

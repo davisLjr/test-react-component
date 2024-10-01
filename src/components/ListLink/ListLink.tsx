@@ -36,7 +36,11 @@ export const ListInformative: React.FC<ListInformativeProps> = ({
   );
 };
 
-export const ListLink: React.FC<ListLinkProps> = ({items, title, linkItems}) => {
+export const ListLink: React.FC<ListLinkProps> = ({
+  items,
+  title,
+  linkItems,
+}) => {
   return (
     <>
       <div className="list-link">

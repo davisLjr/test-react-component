@@ -1,6 +1,7 @@
 import React from "react";
 
-export interface HighlightedVideoData extends React.IframeHTMLAttributes<HTMLIFrameElement> {
+export interface HighlightedVideoData
+  extends React.IframeHTMLAttributes<HTMLIFrameElement> {
   className?: string;
   isIframe?: boolean;
   sourceSrc?: string;
@@ -10,10 +11,11 @@ export interface HighlightedVideoData extends React.IframeHTMLAttributes<HTMLIFr
   trackKind?: string;
   trackSrcLang?: string;
   ariaLabel?: string;
-  urlVideo?: string
+  urlVideo?: string;
 }
 
-export default function HighlightedVideo ({ className,
+export default function HighlightedVideo({
+  className,
   sourceSrc,
   sourceType,
   trackSrc,
@@ -28,10 +30,15 @@ export default function HighlightedVideo ({ className,
   return (
     <>
       {isIframe ? (
-        <iframe className={`card-img${className ? ` ${className}` : ""}`} {...iframeProps}>
-        </iframe>
+        <iframe
+          className={`card-img${className ? ` ${className}` : ""}`}
+          {...iframeProps}
+        ></iframe>
       ) : (
-        <video className={`card-img${className ? ` ${className}` : ""}`} controls={true}>
+        <video
+          className={`card-img${className ? ` ${className}` : ""}`}
+          controls={true}
+        >
           <source src={sourceSrc} type={sourceType} />
           <track
             src={trackSrc}
@@ -48,4 +55,3 @@ export default function HighlightedVideo ({ className,
     </>
   );
 }
-

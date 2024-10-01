@@ -200,15 +200,15 @@ export default function Header(props: React.PropsWithChildren<HeaderProps>) {
                 <div className="navbar-content">
                   {sections &&
                     (!isSectionExtended || isSectionExtended === undefined) && (
-                    <div className="navbar-sections">
-                      <nav>
-                        <h3 className="navbar-sections-title">Secciones</h3>
-                        <ul className="nav nav-pills nav-sections">
-                          {sections}
-                        </ul>
-                      </nav>
-                    </div>
-                  )}
+                      <div className="navbar-sections">
+                        <nav>
+                          <h3 className="navbar-sections-title">Secciones</h3>
+                          <ul className="nav nav-pills nav-sections">
+                            {sections}
+                          </ul>
+                        </nav>
+                      </div>
+                    )}
                   {hasSearch && SEARCH}
                   {hasLogin && <Login></Login>}
                   {hasProfile && USER}

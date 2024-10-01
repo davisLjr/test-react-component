@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode } from "react";
+import React, {HTMLAttributes, ReactNode} from "react";
 import classNames from "classnames";
 
 export interface BadgeData extends HTMLAttributes<HTMLSpanElement> {
@@ -11,7 +11,16 @@ export interface BadgeData extends HTMLAttributes<HTMLSpanElement> {
   isPrimary?: boolean;
 }
 
-export default function Badge ({ className, children, isSecondary = true, isDanger, isSuccess, isInfo, isPrimary, ...props }: BadgeData) {
+export default function Badge({
+  className,
+  children,
+  isSecondary = true,
+  isDanger,
+  isSuccess,
+  isInfo,
+  isPrimary,
+  ...props
+}: BadgeData) {
   const combinedClassName = classNames(
     {
       "badge-secondary": isSecondary,
@@ -24,9 +33,11 @@ export default function Badge ({ className, children, isSecondary = true, isDang
   );
 
   return (
-    <span className={`badge${combinedClassName ? ` ${combinedClassName}` : ""}`} {...props}>
+    <span
+      className={`badge${combinedClassName ? ` ${combinedClassName}` : ""}`}
+      {...props}
+    >
       {children}
     </span>
   );
 }
-

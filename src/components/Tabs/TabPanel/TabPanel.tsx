@@ -4,9 +4,9 @@ export type TabPanelProps = {
   id: string;
   isActive: boolean;
   children: React.ReactNode;
-}
+};
 
-export default function TabPanel ({ id, isActive, children }: TabPanelProps) {
+export default function TabPanel({id, isActive, children}: TabPanelProps) {
   return (
     <div
       className={`tab-pane fade ${isActive ? "show active" : ""}`}
@@ -17,4 +17,4 @@ export default function TabPanel ({ id, isActive, children }: TabPanelProps) {
       {children}
     </div>
   );
-};
+}

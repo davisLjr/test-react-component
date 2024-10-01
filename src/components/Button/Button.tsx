@@ -1,6 +1,6 @@
-import React, { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
+import React, {ButtonHTMLAttributes, AnchorHTMLAttributes} from "react";
 import classNames from "classnames";
-import { SizeComponents } from "../../utils/utils";
+import {SizeComponents} from "../../utils/utils";
 
 export type ButtonProps = {
   size?: SizeComponents;
@@ -17,9 +17,10 @@ export type ButtonProps = {
   isOutlineLink?: boolean;
   isExpanded?: boolean;
   clearClass?: boolean;
-} & ButtonHTMLAttributes<HTMLButtonElement> & AnchorHTMLAttributes<HTMLAnchorElement>;
+} & ButtonHTMLAttributes<HTMLButtonElement> &
+  AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export default function Button ({
+export default function Button({
   children,
   size,
   className,
@@ -39,11 +40,26 @@ export default function Button ({
 }: ButtonProps) {
   const Element = rest.href ? "a" : "button";
 
-  const sizeClass = size === "xs" ? "btn-xs" : size === "sm" ? "btn-sm" : size === "lg" ? "btn-lg" : "";
+  const sizeClass =
+    size === "xs"
+      ? "btn-xs"
+      : size === "sm"
+        ? "btn-sm"
+        : size === "lg"
+          ? "btn-lg"
+          : "";
 
-  const hasStyleClass = isPrimary || isSecondary || isSuccess || isDanger || isLink ||
-    isOutlinePrimary || isOutlineSecondary || isOutlineSuccess ||
-    isOutlineDanger || isOutlineLink;
+  const hasStyleClass =
+    isPrimary ||
+    isSecondary ||
+    isSuccess ||
+    isDanger ||
+    isLink ||
+    isOutlinePrimary ||
+    isOutlineSecondary ||
+    isOutlineSuccess ||
+    isOutlineDanger ||
+    isOutlineLink;
 
   const combinedClassName = classNames(
     sizeClass,
@@ -69,11 +85,11 @@ export default function Button ({
         <Element className={className} {...rest}>
           {children}
         </Element>
-      ) :
-
+      ) : (
         <Element className={`btn ${combinedClassName}`} {...rest}>
           {children}
-        </Element>}
+        </Element>
+      )}
     </>
   );
-};
+}

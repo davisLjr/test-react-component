@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 import classNames from "classnames";
 
 export interface CardBoxData {
@@ -14,14 +14,25 @@ export interface CardBoxData {
   isPanelAside?: boolean;
 }
 
-export default function Card ({ className, children, isHorizontal = false, isThematic = false, isVerticalUbordered = false, isMap = false, isHorizontalUnbordered = false, isPanelHorizontal = false, isPanelVertical = false, isPanelAside = false }: CardBoxData) {
+export default function Card({
+  className,
+  children,
+  isHorizontal = false,
+  isThematic = false,
+  isVerticalUbordered = false,
+  isMap = false,
+  isHorizontalUnbordered = false,
+  isPanelHorizontal = false,
+  isPanelVertical = false,
+  isPanelAside = false,
+}: CardBoxData) {
   const combinedClassName = classNames(
     {
       "card-horizontal": isHorizontal,
       "card-horizontal card-simple card-lg": isThematic,
       "card-simple": isVerticalUbordered,
       "card-map": isMap,
-      "unbordered": isHorizontalUnbordered,
+      unbordered: isHorizontalUnbordered,
       "card-simple panel-vertical": isPanelVertical,
       "card-simple panel-horizontal": isPanelHorizontal,
       "card-simple panel-lateral": isPanelAside,
@@ -35,4 +46,3 @@ export default function Card ({ className, children, isHorizontal = false, isThe
     </div>
   );
 }
-

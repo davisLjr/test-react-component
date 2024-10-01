@@ -13,7 +13,17 @@ export type TabProps = {
   sizeSm?: boolean;
 };
 
-export default function Tab ({ id, label, iconRight, iconLeft, isActive, isDisabled, onClick, sizeLg, sizeSm }: TabProps) {
+export default function Tab({
+  id,
+  label,
+  iconRight,
+  iconLeft,
+  isActive,
+  isDisabled,
+  onClick,
+  sizeLg,
+  sizeSm,
+}: TabProps) {
   return (
     <li className="nav-item" role="presentation">
       <button

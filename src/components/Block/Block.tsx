@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 import BlockTitle from "./BlockTitle";
 import BlockDescription from "./BlockDescription";
 import BlockBox from "./BlockBox";
@@ -14,7 +14,7 @@ export interface BlockComponentData extends BlockData {
   isBgLight?: boolean;
 }
 
-export default function Block ({
+export default function Block({
   title,
   description,
   children,

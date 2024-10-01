@@ -1,4 +1,4 @@
-import React, { ReactNode, HTMLProps } from "react";
+import React, {ReactNode, HTMLProps} from "react";
 
 export interface CardTitleData extends HTMLProps<HTMLElement> {
   children?: ReactNode | ReactNode[];
@@ -7,17 +7,16 @@ export interface CardTitleData extends HTMLProps<HTMLElement> {
   clearClass?: boolean;
 }
 
-export default function CardTitle ({
+export default function CardTitle({
   className = "",
   children,
   as = "h3",
   clearClass = false,
   ...props
 }: CardTitleData) {
-
   const classes = className ? `card-title ${className}`.trim() : "card-title";
 
   return clearClass
-    ? React.createElement(as, { className, ...props }, children)
-    : React.createElement(as, { className: classes, ...props }, children);
+    ? React.createElement(as, {className, ...props}, children)
+    : React.createElement(as, {className: classes, ...props}, children);
 }

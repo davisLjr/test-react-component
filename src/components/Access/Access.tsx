@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { Sizes } from "../../utils/utils.js";
+import React, {ReactNode} from "react";
+import {Sizes} from "../../utils/utils.js";
 import "./Access.scss";
 import AccessLink from "./AccessLink/AccessLink";
 import AccessContent from "./AccessContent/AccessContent";
@@ -15,11 +15,20 @@ export interface AccessData {
   description?: string;
 }
 
-export default function Access ({ size, url, title = "Titulo por defecto", description = "Descripción por defecto", className, children }: AccessData) {
-
-
+export default function Access({
+  size,
+  url,
+  title = "Titulo por defecto",
+  description = "Descripción por defecto",
+  className,
+  children,
+}: AccessData) {
   return (
-    <AccessLink url={url} className={`${className ? className : ""}`} size={size}>
+    <AccessLink
+      url={url}
+      className={`${className ? className : ""}`}
+      size={size}
+    >
       {children}
       <AccessContent>
         <AccessTitle title={title} />

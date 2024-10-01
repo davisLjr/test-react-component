@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 
 export interface CollapseBoxData {
   id?: string;
@@ -6,8 +6,11 @@ export interface CollapseBoxData {
   className?: string;
 }
 
-export default function CollapseBox ({ className, children, id }: CollapseBoxData) {
-
+export default function CollapseBox({
+  className,
+  children,
+  id,
+}: CollapseBoxData) {
   return (
     <div className={`accordion ${className ? className : ""}`} id={id}>
       {children}

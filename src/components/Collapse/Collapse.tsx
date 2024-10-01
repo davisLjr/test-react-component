@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, {ReactNode} from "react";
 import Button from "../Button";
 import CollapseBody from "./Collapse-body/Collapse-body";
 
@@ -13,10 +13,20 @@ export interface CollapseData {
   isForm?: boolean;
 }
 
-export default function Collapse ({ id, childrenBody, childrenHead, dataToggle, dataTarget, dataParent, isForm, className }: CollapseData) {
-
+export default function Collapse({
+  id,
+  childrenBody,
+  childrenHead,
+  dataToggle,
+  dataTarget,
+  dataParent,
+  isForm,
+  className,
+}: CollapseData) {
   return (
-    <div className={`card ${className ? className : ""}`}> {/* Reemplazar por componente Card * */}
+    <div className={`card ${className ? className : ""}`}>
+      {" "}
+      {/* Reemplazar por componente Card * */}
       <Button
         data-toggle={dataToggle}
         data-target={dataTarget}

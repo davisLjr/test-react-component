@@ -117,6 +117,6 @@
     "emitDeclarationOnly": false
   },
   "exclude": [
-    "app",// Excluir la carpeta app
+    "app" // Excluir la carpeta app
   ]
 }

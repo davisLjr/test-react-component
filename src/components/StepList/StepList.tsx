@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { Sizes } from "../../utils/utils";
+import React, {ReactNode} from "react";
+import {Sizes} from "../../utils/utils";
 
 interface StepListData {
   size?: Sizes;
@@ -7,12 +7,13 @@ interface StepListData {
   isNumeric?: boolean;
   isNumber?: boolean;
   stepsList: {
-    title?: string; description?: string;
-    children?: ReactNode | ReactNode[]
+    title?: string;
+    description?: string;
+    children?: ReactNode | ReactNode[];
   }[];
 }
 
-export default function StepList ({
+export default function StepList({
   size,
   stepsList,
   isLight,

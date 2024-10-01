@@ -7,7 +7,12 @@ interface AudioData {
   className?: string;
 }
 
-export default function Audio ({ children, title, description, className }: AudioData) {
+export default function Audio({
+  children,
+  title,
+  description,
+  className,
+}: AudioData) {
   return (
     <div className={`card ${className ? className : ""}`}>
       <div className="card-body">

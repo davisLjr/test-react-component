@@ -50,4 +50,3 @@ export {default as HighlightedVertical} from "./Highlighted/Highlighted-vertical
 export {default as HighlightedVideo} from "./Highlighted/Highlighted-video";
 export {default as HighlightedAside} from "./Highlighted/Highlighted-aside";
 export {default as TabPanel} from "./Tabs/TabPanel";
-
