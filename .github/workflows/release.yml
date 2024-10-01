@@ -50,6 +50,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Construir el proyecto antes de la liberación
+      - name: Build project
+        run: npm run build
+
+      # Publicación con Semantic Release
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
